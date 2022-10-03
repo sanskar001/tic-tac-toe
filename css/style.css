@@ -355,8 +355,8 @@ a {
   transform: translate(-50%, -50%);
 }
 #game-container .inner-container .content-block .game-section .game-board-container .grid-container .grid-item button:active {
-  box-shadow: 0 0.5rem rgba(0, 0, 0, 0.25);
-  transform: translate(0, 1rem);
+  box-shadow: 0 0.5rem rgba(0, 0, 0, 0.25) !important;
+  transform: translate(0, 1rem) !important;
 }
 #game-container .inner-container .content-block .game-section .game-board-container .grid-container .row-2 {
   border-top: 3px solid #a1a195;
