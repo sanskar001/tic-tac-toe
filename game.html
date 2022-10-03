@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="Tic Tac Toe, Game, Fun" />
+    <meta
+      name="description"
+      content="Online Tic Tac Toe Game Website to Enjoy!"
+    />
+    <meta name="author" content="Sanskar Maheshwari" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg" />
+    <title>Tic Tac Toe</title>
+  </head>
+
+  <body>
+    <div id="game-container">
+      <header>
+        <h1>Tic Tac Toe</h1>
+      </header>
+
+      <div class="inner-container">
+        <div class="content-block">
+          <div class="timer-section">
+            <time>15:00</time>
+          </div>
+          <div class="game-section">
+            <div class="players-container" id="player1-container">
+              <div class="score-container">
+                <h3>Player <span>O</span></h3>
+                <p id="player-1-score">0</p>
+              </div>
+            </div>
+            <div class="game-board-container">
+              <div class="grid-container">
+                <div class="grid-item row-1 col-1">
+                  <button class="grid-btn" name="leftTop">
+                    <svg
+                      id="cross-icon"
+                      class="player-icon"
+                      width="81"
+                      height="80"
+                      viewBox="0 0 81 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5239 2.05284C11.5137 -0.792564 6.76139 -0.6642 3.90923 2.33954C1.05707 5.34329 1.18515 10.085 4.19529 12.9304L23.0206 30.7253C27.0405 34.5252 27.2118 40.8668 23.4029 44.8782L2.05807 67.3574C-0.794084 70.3612 -0.666008 75.1028 2.34414 77.9482C5.35429 80.7936 10.1066 80.6653 12.9588 77.6615L34.3345 55.1497C38.1314 51.1511 44.4485 50.9804 48.4556 54.7683L67.33 72.6096C70.3401 75.455 75.0925 75.3267 77.9446 72.3229C80.7968 69.3192 80.6687 64.5775 77.6586 61.7321L58.8169 43.9216C54.7969 40.1217 54.6256 33.7801 58.4346 29.7688L72.7713 14.6701C75.6234 11.6663 75.4954 6.92468 72.4852 4.07928C69.4751 1.23388 64.7227 1.36224 61.8706 4.36599L47.5029 19.4973C43.7061 23.4959 37.389 23.6665 33.3818 19.8787L14.5239 2.05284Z"
+                        fill="#F2ECEC"
+                      />
+                    </svg>
+                    <svg
+                      id="zero-icon"
+                      class="player-icon"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="40"
+                        cy="40"
+                        r="32.5"
+                        stroke="#F2ECEC"
+                        stroke-width="15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="grid-item row-1 col-2">
+                  <button class="grid-btn" name="midTop">
+                    <svg
+                      id="cross-icon"
+                      class="player-icon"
+                      width="81"
+                      height="80"
+                      viewBox="0 0 81 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5239 2.05284C11.5137 -0.792564 6.76139 -0.6642 3.90923 2.33954C1.05707 5.34329 1.18515 10.085 4.19529 12.9304L23.0206 30.7253C27.0405 34.5252 27.2118 40.8668 23.4029 44.8782L2.05807 67.3574C-0.794084 70.3612 -0.666008 75.1028 2.34414 77.9482C5.35429 80.7936 10.1066 80.6653 12.9588 77.6615L34.3345 55.1497C38.1314 51.1511 44.4485 50.9804 48.4556 54.7683L67.33 72.6096C70.3401 75.455 75.0925 75.3267 77.9446 72.3229C80.7968 69.3192 80.6687 64.5775 77.6586 61.7321L58.8169 43.9216C54.7969 40.1217 54.6256 33.7801 58.4346 29.7688L72.7713 14.6701C75.6234 11.6663 75.4954 6.92468 72.4852 4.07928C69.4751 1.23388 64.7227 1.36224 61.8706 4.36599L47.5029 19.4973C43.7061 23.4959 37.389 23.6665 33.3818 19.8787L14.5239 2.05284Z"
+                        fill="#F2ECEC"
+                      />
+                    </svg>
+                    <svg
+                      id="zero-icon"
+                      class="player-icon"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="40"
+                        cy="40"
+                        r="32.5"
+                        stroke="#F2ECEC"
+                        stroke-width="15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="grid-item row-1 col-3">
+                  <button class="grid-btn" name="rightTop">
+                    <svg
+                      id="cross-icon"
+                      class="player-icon"
+                      width="81"
+                      height="80"
+                      viewBox="0 0 81 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5239 2.05284C11.5137 -0.792564 6.76139 -0.6642 3.90923 2.33954C1.05707 5.34329 1.18515 10.085 4.19529 12.9304L23.0206 30.7253C27.0405 34.5252 27.2118 40.8668 23.4029 44.8782L2.05807 67.3574C-0.794084 70.3612 -0.666008 75.1028 2.34414 77.9482C5.35429 80.7936 10.1066 80.6653 12.9588 77.6615L34.3345 55.1497C38.1314 51.1511 44.4485 50.9804 48.4556 54.7683L67.33 72.6096C70.3401 75.455 75.0925 75.3267 77.9446 72.3229C80.7968 69.3192 80.6687 64.5775 77.6586 61.7321L58.8169 43.9216C54.7969 40.1217 54.6256 33.7801 58.4346 29.7688L72.7713 14.6701C75.6234 11.6663 75.4954 6.92468 72.4852 4.07928C69.4751 1.23388 64.7227 1.36224 61.8706 4.36599L47.5029 19.4973C43.7061 23.4959 37.389 23.6665 33.3818 19.8787L14.5239 2.05284Z"
+                        fill="#F2ECEC"
+                      />
+                    </svg>
+                    <svg
+                      id="zero-icon"
+                      class="player-icon"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="40"
+                        cy="40"
+                        r="32.5"
+                        stroke="#F2ECEC"
+                        stroke-width="15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="grid-item row-2 col-1">
+                  <button class="grid-btn" name="leftMid">
+                    <svg
+                      id="cross-icon"
+                      class="player-icon"
+                      width="81"
+                      height="80"
+                      viewBox="0 0 81 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5239 2.05284C11.5137 -0.792564 6.76139 -0.6642 3.90923 2.33954C1.05707 5.34329 1.18515 10.085 4.19529 12.9304L23.0206 30.7253C27.0405 34.5252 27.2118 40.8668 23.4029 44.8782L2.05807 67.3574C-0.794084 70.3612 -0.666008 75.1028 2.34414 77.9482C5.35429 80.7936 10.1066 80.6653 12.9588 77.6615L34.3345 55.1497C38.1314 51.1511 44.4485 50.9804 48.4556 54.7683L67.33 72.6096C70.3401 75.455 75.0925 75.3267 77.9446 72.3229C80.7968 69.3192 80.6687 64.5775 77.6586 61.7321L58.8169 43.9216C54.7969 40.1217 54.6256 33.7801 58.4346 29.7688L72.7713 14.6701C75.6234 11.6663 75.4954 6.92468 72.4852 4.07928C69.4751 1.23388 64.7227 1.36224 61.8706 4.36599L47.5029 19.4973C43.7061 23.4959 37.389 23.6665 33.3818 19.8787L14.5239 2.05284Z"
+                        fill="#F2ECEC"
+                      />
+                    </svg>
+                    <svg
+                      id="zero-icon"
+                      class="player-icon"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="40"
+                        cy="40"
+                        r="32.5"
+                        stroke="#F2ECEC"
+                        stroke-width="15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="grid-item row-2 col-2">
+                  <button class="grid-btn" name="midMid">
+                    <svg
+                      id="cross-icon"
+                      class="player-icon"
+                      width="81"
+                      height="80"
+                      viewBox="0 0 81 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5239 2.05284C11.5137 -0.792564 6.76139 -0.6642 3.90923 2.33954C1.05707 5.34329 1.18515 10.085 4.19529 12.9304L23.0206 30.7253C27.0405 34.5252 27.2118 40.8668 23.4029 44.8782L2.05807 67.3574C-0.794084 70.3612 -0.666008 75.1028 2.34414 77.9482C5.35429 80.7936 10.1066 80.6653 12.9588 77.6615L34.3345 55.1497C38.1314 51.1511 44.4485 50.9804 48.4556 54.7683L67.33 72.6096C70.3401 75.455 75.0925 75.3267 77.9446 72.3229C80.7968 69.3192 80.6687 64.5775 77.6586 61.7321L58.8169 43.9216C54.7969 40.1217 54.6256 33.7801 58.4346 29.7688L72.7713 14.6701C75.6234 11.6663 75.4954 6.92468 72.4852 4.07928C69.4751 1.23388 64.7227 1.36224 61.8706 4.36599L47.5029 19.4973C43.7061 23.4959 37.389 23.6665 33.3818 19.8787L14.5239 2.05284Z"
+                        fill="#F2ECEC"
+                      />
+                    </svg>
+                    <svg
+                      id="zero-icon"
+                      class="player-icon"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="40"
+                        cy="40"
+                        r="32.5"
+                        stroke="#F2ECEC"
+                        stroke-width="15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="grid-item row-2 col-3">
+                  <button class="grid-btn" name="rightMid">
+                    <svg
+                      id="cross-icon"
+                      class="player-icon"
+                      width="81"
+                      height="80"
+                      viewBox="0 0 81 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5239 2.05284C11.5137 -0.792564 6.76139 -0.6642 3.90923 2.33954C1.05707 5.34329 1.18515 10.085 4.19529 12.9304L23.0206 30.7253C27.0405 34.5252 27.2118 40.8668 23.4029 44.8782L2.05807 67.3574C-0.794084 70.3612 -0.666008 75.1028 2.34414 77.9482C5.35429 80.7936 10.1066 80.6653 12.9588 77.6615L34.3345 55.1497C38.1314 51.1511 44.4485 50.9804 48.4556 54.7683L67.33 72.6096C70.3401 75.455 75.0925 75.3267 77.9446 72.3229C80.7968 69.3192 80.6687 64.5775 77.6586 61.7321L58.8169 43.9216C54.7969 40.1217 54.6256 33.7801 58.4346 29.7688L72.7713 14.6701C75.6234 11.6663 75.4954 6.92468 72.4852 4.07928C69.4751 1.23388 64.7227 1.36224 61.8706 4.36599L47.5029 19.4973C43.7061 23.4959 37.389 23.6665 33.3818 19.8787L14.5239 2.05284Z"
+                        fill="#F2ECEC"
+                      />
+                    </svg>
+                    <svg
+                      id="zero-icon"
+                      class="player-icon"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="40"
+                        cy="40"
+                        r="32.5"
+                        stroke="#F2ECEC"
+                        stroke-width="15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="grid-item row-3 col-1">
+                  <button class="grid-btn" name="leftBottom">
+                    <svg
+                      id="cross-icon"
+                      class="player-icon"
+                      width="81"
+                      height="80"
+                      viewBox="0 0 81 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5239 2.05284C11.5137 -0.792564 6.76139 -0.6642 3.90923 2.33954C1.05707 5.34329 1.18515 10.085 4.19529 12.9304L23.0206 30.7253C27.0405 34.5252 27.2118 40.8668 23.4029 44.8782L2.05807 67.3574C-0.794084 70.3612 -0.666008 75.1028 2.34414 77.9482C5.35429 80.7936 10.1066 80.6653 12.9588 77.6615L34.3345 55.1497C38.1314 51.1511 44.4485 50.9804 48.4556 54.7683L67.33 72.6096C70.3401 75.455 75.0925 75.3267 77.9446 72.3229C80.7968 69.3192 80.6687 64.5775 77.6586 61.7321L58.8169 43.9216C54.7969 40.1217 54.6256 33.7801 58.4346 29.7688L72.7713 14.6701C75.6234 11.6663 75.4954 6.92468 72.4852 4.07928C69.4751 1.23388 64.7227 1.36224 61.8706 4.36599L47.5029 19.4973C43.7061 23.4959 37.389 23.6665 33.3818 19.8787L14.5239 2.05284Z"
+                        fill="#F2ECEC"
+                      />
+                    </svg>
+                    <svg
+                      id="zero-icon"
+                      class="player-icon"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="40"
+                        cy="40"
+                        r="32.5"
+                        stroke="#F2ECEC"
+                        stroke-width="15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="grid-item row-3 col-2">
+                  <button class="grid-btn" name="midBottom">
+                    <svg
+                      id="cross-icon"
+                      class="player-icon"
+                      width="81"
+                      height="80"
+                      viewBox="0 0 81 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5239 2.05284C11.5137 -0.792564 6.76139 -0.6642 3.90923 2.33954C1.05707 5.34329 1.18515 10.085 4.19529 12.9304L23.0206 30.7253C27.0405 34.5252 27.2118 40.8668 23.4029 44.8782L2.05807 67.3574C-0.794084 70.3612 -0.666008 75.1028 2.34414 77.9482C5.35429 80.7936 10.1066 80.6653 12.9588 77.6615L34.3345 55.1497C38.1314 51.1511 44.4485 50.9804 48.4556 54.7683L67.33 72.6096C70.3401 75.455 75.0925 75.3267 77.9446 72.3229C80.7968 69.3192 80.6687 64.5775 77.6586 61.7321L58.8169 43.9216C54.7969 40.1217 54.6256 33.7801 58.4346 29.7688L72.7713 14.6701C75.6234 11.6663 75.4954 6.92468 72.4852 4.07928C69.4751 1.23388 64.7227 1.36224 61.8706 4.36599L47.5029 19.4973C43.7061 23.4959 37.389 23.6665 33.3818 19.8787L14.5239 2.05284Z"
+                        fill="#F2ECEC"
+                      />
+                    </svg>
+                    <svg
+                      id="zero-icon"
+                      class="player-icon"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="40"
+                        cy="40"
+                        r="32.5"
+                        stroke="#F2ECEC"
+                        stroke-width="15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="grid-item row-3 col-3">
+                  <button class="grid-btn" name="rightBottom">
+                    <svg
+                      id="cross-icon"
+                      class="player-icon"
+                      width="81"
+                      height="80"
+                      viewBox="0 0 81 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M14.5239 2.05284C11.5137 -0.792564 6.76139 -0.6642 3.90923 2.33954C1.05707 5.34329 1.18515 10.085 4.19529 12.9304L23.0206 30.7253C27.0405 34.5252 27.2118 40.8668 23.4029 44.8782L2.05807 67.3574C-0.794084 70.3612 -0.666008 75.1028 2.34414 77.9482C5.35429 80.7936 10.1066 80.6653 12.9588 77.6615L34.3345 55.1497C38.1314 51.1511 44.4485 50.9804 48.4556 54.7683L67.33 72.6096C70.3401 75.455 75.0925 75.3267 77.9446 72.3229C80.7968 69.3192 80.6687 64.5775 77.6586 61.7321L58.8169 43.9216C54.7969 40.1217 54.6256 33.7801 58.4346 29.7688L72.7713 14.6701C75.6234 11.6663 75.4954 6.92468 72.4852 4.07928C69.4751 1.23388 64.7227 1.36224 61.8706 4.36599L47.5029 19.4973C43.7061 23.4959 37.389 23.6665 33.3818 19.8787L14.5239 2.05284Z"
+                        fill="#F2ECEC"
+                      />
+                    </svg>
+                    <svg
+                      id="zero-icon"
+                      class="player-icon"
+                      width="80"
+                      height="80"
+                      viewBox="0 0 80 80"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <circle
+                        cx="40"
+                        cy="40"
+                        r="32.5"
+                        stroke="#F2ECEC"
+                        stroke-width="15"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="players-container" id="player2-container">
+              <div class="score-container">
+                <h3>Player <span>X</span></h3>
+                <p id="player-2-score">0</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="help-btn">?</button>
+    </div>
+    <div id="toss-window-container">
+      <div class="inner-container">
+        <div class="toss-container">
+          <div class="flip-card-container">
+            <div class="flip-card">
+              <div class="front-side">
+                <p>Player</p>
+                <div class="player-logo">
+                  <svg
+                    width="81"
+                    height="80"
+                    viewBox="0 0 81 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.5239 2.05284C11.5137 -0.792564 6.76139 -0.6642 3.90923 2.33954C1.05707 5.34329 1.18515 10.085 4.19529 12.9304L23.0206 30.7253C27.0405 34.5252 27.2118 40.8668 23.4029 44.8782L2.05807 67.3574C-0.794084 70.3612 -0.666008 75.1028 2.34414 77.9482C5.35429 80.7936 10.1066 80.6653 12.9588 77.6615L34.3345 55.1497C38.1314 51.1511 44.4485 50.9804 48.4556 54.7683L67.33 72.6096C70.3401 75.455 75.0925 75.3267 77.9446 72.3229C80.7968 69.3192 80.6687 64.5775 77.6586 61.7321L58.8169 43.9216C54.7969 40.1217 54.6256 33.7801 58.4346 29.7688L72.7713 14.6701C75.6234 11.6663 75.4954 6.92468 72.4852 4.07928C69.4751 1.23388 64.7227 1.36224 61.8706 4.36599L47.5029 19.4973C43.7061 23.4959 37.389 23.6665 33.3818 19.8787L14.5239 2.05284Z"
+                      fill="#F2ECEC"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="back-side">
+                <p>Player</p>
+                <div class="player-logo">
+                  <svg
+                    width="80"
+                    height="80"
+                    viewBox="0 0 80 80"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="40"
+                      cy="40"
+                      r="32.5"
+                      stroke="#F2ECEC"
+                      stroke-width="15"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="button-container">
+          <button id="toss-btn">Toss</button>
+        </div>
+      </div>
+    </div>
+    <div id="pop-window-container">
+      <div class="inner-container">
+        <h2 id="result">Player X won</h2>
+        <div class="button-container">
+          <button id="resume-btn">
+            Resume
+            <span>
+              <svg
+                width="33"
+                height="36"
+                viewBox="0 0 33 36"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M30.5 13.6699C33.8333 15.5944 33.8333 20.4056 30.5 22.3301L8 35.3205C4.66667 37.245 0.5 34.8394 0.5 30.9904L0.5 5.00962C0.5 1.16062 4.66667 -1.24501 8 0.679492L30.5 13.6699Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
+          </button>
+          <button id="restart-btn">
+            <a href="game.html"
+              >Restart
+              <span>
+                <svg
+                  width="34"
+                  height="41"
+                  viewBox="0 0 34 41"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.6668 7.36281C17.1155 7.33022 16.6667 6.88562 16.6667 6.33333V1.41421C16.6667 0.523309 15.5895 0.0771418 14.9596 0.707107L6.95711 8.70956C6.56658 9.10008 6.56658 9.73325 6.95711 10.1238L14.9596 18.1262C15.5895 18.7562 16.6667 18.31 16.6667 17.4191V12.5C16.6667 11.9477 17.116 11.4958 17.6665 11.5395C24.0961 12.0501 29.1667 17.4407 29.1667 24C29.1667 30.8958 23.5625 36.5 16.6667 36.5C10.1074 36.5 4.71672 31.4295 4.20621 24.9998C4.16249 24.4493 3.71895 24 3.16667 24H1C0.447716 24 -0.00311438 24.4488 0.0294778 25.0001C0.546288 33.7424 7.79413 40.6667 16.6667 40.6667C25.875 40.6667 33.3333 33.2083 33.3333 24C33.3333 15.1275 26.409 7.87962 17.6668 7.36281Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </a>
+          </button>
+          <button id="exit-btn">
+            <a href="index.html"
+              >Exit
+              <span>
+                <svg
+                  width="29"
+                  height="29"
+                  viewBox="0 0 29 29"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M27.6979 4.40625C28.5091 3.59508 28.5091 2.27992 27.6979 1.46875V1.46875C26.8868 0.657582 25.5716 0.657582 24.7604 1.46875L16.7047 9.52451C15.5331 10.6961 13.6336 10.6961 12.462 9.52451L4.40625 1.46875C3.59508 0.657581 2.27992 0.657582 1.46875 1.46875V1.46875C0.657582 2.27992 0.657582 3.59508 1.46875 4.40625L9.52451 12.462C10.6961 13.6336 10.6961 15.5331 9.52451 16.7047L1.46875 24.7604C0.657581 25.5716 0.657582 26.8868 1.46875 27.6979V27.6979C2.27992 28.5091 3.59508 28.5091 4.40625 27.6979L12.462 19.6422C13.6336 18.4706 15.5331 18.4706 16.7047 19.6422L24.7604 27.6979C25.5716 28.5091 26.8868 28.5091 27.6979 27.6979V27.6979C28.5091 26.8868 28.5091 25.5716 27.6979 24.7604L19.6422 16.7047C18.4706 15.5331 18.4706 13.6336 19.6422 12.462L27.6979 4.40625Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="help-container">
+      <h1>Tic Tac Toe</h1>
+      <button id="back-btn">
+        <img src="images/back-icon.svg" alt="Back Icon" />
+      </button>
+      <div class="rules-container">
+        <h2>Rules</h2>
+        <div class="text-container">
+          <div class="content-block">
+            <div class="rules-points">
+              <span>1</span>
+              <p>The game is played on a grid that's 3 squares by 3 squares.</p>
+            </div>
+            <div class="inner-container">
+              <div class="text-section">
+                <div class="rules-points">
+                  <span>2</span>
+                  <p>
+                    You are Player X, your friend is Player O. Players take
+                    turns putting their marks in empty squares.
+                  </p>
+                </div>
+                <div class="rules-points">
+                  <span>3</span>
+                  <p>
+                    The first player to get 3 of their marks in a row (up, down,
+                    across, or diagonally) is the winner.
+                  </p>
+                </div>
+                <div class="rules-points">
+                  <span>4</span>
+                  <p>
+                    When all 9 squares are full, the game is over. If no player
+                    has 3 marks in a row, the game ends in a tie.
+                  </p>
+                </div>
+              </div>
+              <div class="image-section">
+                <img src="images/game-board.png" alt="Game Board Picture" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

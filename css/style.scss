@@ -1,0 +1,820 @@
+// ============================ Sass Styling ============================
+
+// Sass Variables List
+$primaryColor: #70c11f;
+$primaryFont: "Lilita One", cursive;
+$secondaryColor: #579f0f;
+$myColors: (
+  "fontColor": #fffcfc,
+  "fontColor-2": #e1ffc4,
+);
+
+// Sass @mixin
+
+@mixin dimension($myWidth, $myHeight) {
+  width: $myWidth;
+  height: $myHeight;
+}
+
+// ----------------------------------------------------------------------
+// Reset Styling of page
+* {
+  margin: 0; // Remove all margin
+  padding: 0; // Remove all padding
+  box-sizing: border-box; // Making box sizing as per their border
+  font-family: $primaryFont;
+}
+
+// Styling of root element
+
+html {
+  font-size: 10px; // Font size of root element is 10px.
+}
+
+// Styling of body element
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+// Styling of main heading
+
+h1 {
+  font: {
+    size: 8rem;
+    weight: 400;
+  }
+  text: {
+    align: center;
+    transform: uppercase;
+    shadow: 1px 4px #4a5252;
+  }
+  padding: 0;
+  position: relative;
+  top: 3rem;
+  color: $primaryColor;
+
+  @media screen and (min-width: 900px) and (max-width: 1540px) {
+    font-size: 6rem;
+    top: 2rem;
+  }
+
+  @media screen and (max-width: 900px) {
+    font-size: 4.5rem;
+    top: 2rem;
+  }
+}
+
+// Styling general button
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+// Styling general anchor tag
+a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  color: map-get($myColors, "fontColor");
+  text-decoration: none;
+}
+
+// =======================================================================
+// ============================ HOME PAGE ================================
+// =======================================================================
+
+// ========================== home page container ============================
+#home-container {
+  @include dimension(100%, 100vh);
+  z-index: -1;
+  background: {
+    image: url("../Images/home-bg.png");
+    repeat: no-repeat;
+    size: cover;
+    // attachment: fixed;
+    position: center;
+  }
+
+  // Play Button styling like clickable button
+  #play-btn {
+    @include dimension(20rem, 8rem);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate((-50%, -50%));
+    border-radius: 2rem;
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    background-color: $primaryColor;
+    color: map-get($myColors, "fontColor");
+    box-shadow: 0 1.2rem rgba(0, 0, 0, 0.25);
+    transition: 0.1s;
+
+    a {
+      line-height: 8rem;
+    }
+  }
+
+  #play-btn:hover {
+    background-color: $secondaryColor;
+  }
+
+  #play-btn:active {
+    background-color: $secondaryColor;
+    box-shadow: 0 0.5rem rgba(0, 0, 0, 0.25);
+    top: 51%;
+  }
+
+  @media screen and (max-width: 900px) {
+    #play-btn {
+      @include dimension(18rem, 7rem);
+      border-radius: 1.8rem;
+      font-size: 4.4rem;
+
+      a {
+        line-height: 7rem;
+      }
+    }
+  }
+}
+
+// Help button Styling
+#help-btn,
+#back-btn {
+  @include dimension(7rem, 7rem);
+  position: fixed;
+  left: 3rem;
+  bottom: 3rem;
+  border-radius: 50%;
+  background-color: $primaryColor;
+  color: map-get($myColors, "fontColor");
+  font-size: 4.8rem;
+  box-shadow: 0 0.6rem rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s;
+
+  @media screen and (max-width: 900px) {
+    @include dimension(4.5rem, 4.5rem);
+    font-size: 3rem;
+    left: 2rem;
+    bottom: 2rem;
+  }
+}
+
+#help-btn:hover,
+#back-btn:hover {
+  background-color: $secondaryColor;
+}
+
+#help-btn:active,
+#back-btn:active {
+  background-color: $secondaryColor;
+  box-shadow: 0 0.1rem rgba(0, 0, 0, 0.25);
+  bottom: 2.5rem;
+}
+
+// ====================== Help containeer ======================
+
+#help-container {
+  display: none; // display: block
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../Images/help-bg.png");
+  background: {
+    repeat: no-repeat;
+    size: cover;
+    // attachment: fixed;
+    position: center;
+  }
+
+  #back-btn {
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    img {
+      width: 60%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate((-50%, -50%));
+    }
+
+    @media screen and (max-width: 900px) {
+      top: 2rem;
+      left: 1rem;
+    }
+  }
+
+  #back-btn:active {
+    top: 3.5rem;
+  }
+
+  // ============= Rules container styling ====================
+
+  .rules-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 6rem auto;
+
+    h2 {
+      width: 14rem;
+      margin: 0 auto;
+      line-height: 80%;
+      text-align: center;
+      text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+      letter-spacing: 1px;
+      color: map-get($myColors, "fontColor-2");
+      font-size: 6rem;
+      font-weight: 400;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 0.3rem;
+      margin-top: 0.3rem;
+      background-color: map-get($myColors, "fontColor-2");
+      border-radius: 5px;
+    }
+
+    .text-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      padding: 2rem 6rem;
+      color: map-get($myColors, "fontColor-2");
+
+      .content-block {
+        .rules-points {
+          display: grid;
+          grid-template-columns: 5rem 1fr;
+          gap: 2rem;
+          padding: 2rem 1rem;
+          font-size: 3.6rem;
+          font-weight: 400;
+
+          span {
+            width: 5rem;
+            height: 5rem;
+            text-align: center;
+            line-height: 5rem;
+            background-color: $primaryColor;
+            border-radius: 50%;
+          }
+        }
+
+        .inner-container {
+          display: grid;
+          grid-template-columns: 1.5fr 1fr;
+          align-items: flex-start;
+
+          @media screen and (max-width: 1200px) {
+            grid-template-columns: 1fr;
+
+            .image-section {
+              grid-row: 1 / 2;
+            }
+          }
+
+          .image-section {
+            text-align: center;
+            img {
+              width: 100%;
+              max-width: 45rem;
+              min-width: 38rem;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      h2 {
+        width: 11rem;
+        font-size: 4.5rem;
+      }
+
+      .text-container {
+        padding: 2rem 1.5rem;
+
+        .content-block {
+          .rules-points {
+            grid-template-columns: 4rem 1fr;
+            gap: 1rem;
+            padding: 2rem 0rem;
+            font-size: 2.8rem;
+
+            span {
+              width: 4rem;
+              height: 4rem;
+              line-height: 4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// =======================================================================
+// ============================ GAME PAGE ================================
+// =======================================================================
+
+// Game page main container
+
+#game-container {
+  width: 100%;
+  min-height: 100vh;
+  z-index: -1;
+  background: {
+    image: url("../Images/game-bg.png");
+    repeat: no-repeat;
+    size: cover;
+    position: center;
+  }
+
+  .inner-container {
+    // border: 1px solid white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+
+    .content-block {
+      width: 100%;
+      margin: 2rem 0;
+
+      .timer-section {
+        width: 100%;
+        padding: 1rem 0;
+        text-align: center;
+
+        time {
+          font-size: 6rem;
+          text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+          color: map-get($myColors, "fontColor");
+        }
+      }
+
+      .game-section {
+        width: 100%;
+        max-width: 1900px;
+        margin: 2rem auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-evenly;
+
+        .players-container {
+          padding: 5rem 0;
+          text-align: center;
+          // border: 1px solid white;
+
+          .score-container {
+            h3 {
+              font-size: 6rem;
+              font-weight: 400;
+              color: $primaryColor;
+              text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
+
+              span {
+                color: map-get($myColors, "fontColor");
+              }
+            }
+            p {
+              margin-top: 2rem;
+              font-size: 18rem;
+              color: map-get($myColors, "fontColor");
+              text-shadow: 7px 4px rgba(0, 0, 0, 0.25);
+            }
+          }
+        }
+
+        .game-board-container {
+          // border: 1px solid white;
+
+          .grid-container {
+            @include dimension(60rem, 60rem);
+            margin: 0px auto;
+            display: grid;
+            grid-template-columns: auto auto auto;
+
+            .grid-item {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              button {
+                display: inline-block;
+                width: 12rem;
+                height: 12rem;
+                position: relative;
+                color: map-get($myColors, "fontColor");
+                // background: linear-gradient(146.54deg, rgba(255, 255, 255, 0.7) 4.33%, #70C11F 25.12%,
+                // rgba(119, 152, 85, 0.86) 75.26%);
+                background: linear-gradient(
+                  146.54deg,
+                  rgba(255, 255, 255, 0.7) 4.33%,
+                  #70c11f 25.12%,
+                  rgba(119, 152, 85, 0.86) 75.26%
+                );
+                border-radius: 1.5rem;
+                box-shadow: 0 1.2rem rgba(0, 0, 0, 0.25);
+                transition: 0.1s;
+
+                svg {
+                  display: none;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate((-50%, -50%));
+                }
+              }
+
+              button:active {
+                // background: linear-gradient(146.54deg, #70C11F 4.34%, rgba(65, 125, 4, 0.95) 62.62%);
+                box-shadow: 0 0.5rem rgba(0, 0, 0, 0.25);
+                transform: translate(0, 1rem);
+              }
+            }
+
+            .row-2 {
+              border-top: 3px solid #a1a195;
+              border-bottom: 3px solid #a1a195;
+            }
+
+            .col-2 {
+              border-left: 3px solid #a1a195;
+              border-right: 3px solid #a1a195;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 900px) and (max-width: 1540px) {
+    .inner-container {
+      .content-block {
+        margin: 2rem 0;
+
+        .timer-section {
+          time {
+            font-size: 4.5rem; // Its is 75% of initial
+          }
+        }
+
+        .game-section {
+          .players-container {
+            .score-container {
+              h3 {
+                font-size: 4.5rem;
+              }
+              p {
+                margin-top: 2rem;
+                font-size: 12.5rem;
+              }
+            }
+          }
+
+          .game-board-container {
+            .grid-container {
+              @include dimension(45rem, 45rem);
+              .grid-item {
+                button {
+                  width: 9rem;
+                  height: 9rem;
+                  border-radius: 1.2rem;
+                  box-shadow: 0 1rem rgba(0, 0, 0, 0.25);
+                  transition: 0.1s;
+
+                  svg {
+                    width: 75%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .inner-container {
+      .content-block {
+        margin: 0;
+
+        .timer-section {
+          padding: 0.5rem 0;
+          time {
+            font-size: 4.5rem; // Its is 75% of initial
+          }
+        }
+
+        .game-section {
+          grid-template-columns: repeat(2, 1fr);
+          column-gap: 100px;
+
+          .players-container {
+            justify-self: end;
+            padding: 1rem 0;
+
+            &:last-child {
+              justify-self: start;
+            }
+
+            .score-container {
+              h3 {
+                font-size: 3.5rem;
+              }
+              p {
+                margin-top: 0rem;
+                font-size: 10.5rem;
+              }
+            }
+          }
+
+          .game-board-container {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+            .grid-container {
+              @include dimension(40rem, 40rem);
+              .grid-item {
+                button {
+                  width: 8rem;
+                  height: 8rem;
+                  border-radius: 1.2rem;
+                  box-shadow: 0 1rem rgba(0, 0, 0, 0.25);
+                  transition: 0.1s;
+
+                  svg {
+                    width: 75%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// =================== Pop Up Window Styling ========================
+
+#pop-window-container {
+  @include dimension(100%, 100%);
+  display: none; // display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(40, 45, 87, 0.8),
+    rgba(40, 45, 87, 0.95),
+    rgba(0, 0, 0, 0.8)
+  );
+
+  .inner-container {
+    padding: 2rem 3rem;
+
+    h2 {
+      font-size: 7rem;
+      font-weight: 400;
+      color: map-get($myColors, "fontColor");
+      text-align: center;
+      text-shadow: 6px 5px rgba(0, 0, 0, 0.3);
+      margin-bottom: 8rem;
+    }
+
+    // Button container consist of resume, restart and exit buttons
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      button {
+        @include dimension(22rem, 8rem);
+        display: inline-block;
+        margin-bottom: 3.2rem;
+        border-radius: 2rem;
+        background-color: $primaryColor;
+        font-size: 4rem;
+        color: map-get($myColors, "fontColor");
+        box-shadow: 0 1.2rem rgba(255, 255, 255, 0.8);
+        transition: 0.1s;
+
+        a {
+          line-height: 8rem;
+        }
+
+        span {
+          position: relative;
+          top: 5%;
+        }
+      }
+
+      button:hover {
+        background-color: $secondaryColor;
+      }
+
+      button:active {
+        background-color: $secondaryColor;
+        box-shadow: 0 0.5rem rgba(0, 0, 0, 0.25);
+        transform: translate(0, 1rem);
+      }
+    }
+  }
+
+  @media screen and (max-width: 1540px) {
+    .inner-container {
+      h2 {
+        font-size: 5.4rem;
+        margin-bottom: 6rem;
+      }
+
+      // Button container consist of resume, restart and exit buttons
+      .button-container {
+        button {
+          @include dimension(20rem, 7rem);
+          border-radius: 1.8rem;
+          font-size: 3.6rem;
+          box-shadow: 0 1rem rgba(255, 255, 255, 0.8);
+          a {
+            line-height: 7rem;
+          }
+          span {
+            svg {
+              width: 2.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ========================== Toss Window Container Styling =====================
+
+#toss-window-container {
+  @include dimension(100%, 100%);
+  display: none; // display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-in;
+  background: linear-gradient(
+    to bottom,
+    rgba(40, 45, 87, 0.8),
+    rgba(40, 45, 87, 0.95),
+    rgba(0, 0, 0, 0.8)
+  );
+
+  .inner-container {
+    padding: 2rem 3rem;
+
+    // Toss container consist of toss flip card container.
+
+    .toss-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      margin-bottom: 4rem;
+
+      .flip-card-container {
+        width: 25rem;
+        height: 30rem;
+        background: transparent;
+        perspective: 600px;
+
+        .flip-card {
+          @include dimension(100%, 100%);
+          position: relative;
+          transition-property: transform;
+          transition-duration: 0.5s;
+          transition-timing-function: ease-out;
+          transform-style: preserve-3d;
+
+          .front-side,
+          .back-side {
+            @include dimension(100%, 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 4px solid map-get($myColors, "fontColor");
+            border-radius: 1.2rem;
+            box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2),
+              -4px 20px 20px 0px rgba(0, 0, 0, 0.2);
+            backface-visibility: hidden;
+
+            p {
+              font-size: 5.4rem;
+              text-align: center;
+              padding: 1.5rem 0;
+              margin-bottom: 1rem;
+              color: map-get($myColors, "fontColor");
+              text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
+            }
+
+            .player-logo {
+              @include dimension(100%, 60%);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              svg {
+                width: 12rem;
+                height: auto;
+                filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.25));
+              }
+            }
+          }
+
+          .front-side {
+            background: linear-gradient(
+              146.54deg,
+              #70c11f 35%,
+              rgba(75, 137, 12, 0.98) 60%
+            );
+            // left: 10rem;
+            // transform: rotateY(180deg);
+          }
+
+          .back-side {
+            background: linear-gradient(
+              146.54deg,
+              rgba(75, 137, 12, 0.98) 35.26%,
+              #70c11f 75.12%
+            );
+            transform: rotateY(180deg);
+            // display: none;
+          }
+        }
+      }
+
+      // .flip-card-container:hover .flip-card {
+      //     transform: rotateY(180deg);
+      // }
+    }
+
+    // This button container consist of toss button.
+
+    .button-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+
+      #toss-btn {
+        @include dimension(20rem, 8rem);
+        font-size: 4.8rem;
+        background-color: $primaryColor;
+        color: map-get($myColors, "fontColor");
+        border-radius: 2rem;
+        box-shadow: 0 1.2rem rgba(255, 255, 255, 0.8);
+        transition: all, 0.1s;
+      }
+
+      #toss-btn:hover {
+        background-color: $secondaryColor;
+      }
+
+      #toss-btn:active {
+        background-color: $secondaryColor;
+        box-shadow: 0 0.5rem rgba(255, 255, 255, 0.8);
+        transform: translate(0, 1.2rem);
+      }
+    }
+  }
+}
