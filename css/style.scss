@@ -584,7 +584,9 @@ a {
 // =================== Pop Up Window Styling ========================
 
 #pop-window-container {
-  @include dimension(100%, 100%);
+  // @include dimension(100%, 100%);
+  width: 100%;
+  min-height: 100vh;
   display: none; // display: flex;
   justify-content: center;
   align-items: center;
@@ -682,8 +684,10 @@ a {
 // ========================== Toss Window Container Styling =====================
 
 #toss-window-container {
-  @include dimension(100%, 100%);
-  display: none; // display: flex;
+  // @include dimension(100%, 100%);
+  width: 100%;
+  min-height: 100vh;
+  display: flex; // display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;

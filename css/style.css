@@ -116,7 +116,7 @@ a {
 }
 @media screen and (max-width: 900px) {
   #help-btn,
-  #back-btn {
+#back-btn {
     width: 4.5rem;
     height: 4.5rem;
     font-size: 3rem;
@@ -145,13 +145,7 @@ a {
   top: 0;
   left: 0;
   z-index: 10;
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.6)
-    ),
-    url("../images/help-bg.png");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url("../images/help-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -221,12 +215,7 @@ a {
   font-size: 3.6rem;
   font-weight: 400;
 }
-#help-container
-  .rules-container
-  .text-container
-  .content-block
-  .rules-points
-  span {
+#help-container .rules-container .text-container .content-block .rules-points span {
   width: 5rem;
   height: 5rem;
   text-align: center;
@@ -234,47 +223,23 @@ a {
   background-color: #70c11f;
   border-radius: 50%;
 }
-#help-container
-  .rules-container
-  .text-container
-  .content-block
-  .inner-container {
+#help-container .rules-container .text-container .content-block .inner-container {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   align-items: flex-start;
 }
 @media screen and (max-width: 1200px) {
-  #help-container
-    .rules-container
-    .text-container
-    .content-block
-    .inner-container {
+  #help-container .rules-container .text-container .content-block .inner-container {
     grid-template-columns: 1fr;
   }
-  #help-container
-    .rules-container
-    .text-container
-    .content-block
-    .inner-container
-    .image-section {
+  #help-container .rules-container .text-container .content-block .inner-container .image-section {
     grid-row: 1/2;
   }
 }
-#help-container
-  .rules-container
-  .text-container
-  .content-block
-  .inner-container
-  .image-section {
+#help-container .rules-container .text-container .content-block .inner-container .image-section {
   text-align: center;
 }
-#help-container
-  .rules-container
-  .text-container
-  .content-block
-  .inner-container
-  .image-section
-  img {
+#help-container .rules-container .text-container .content-block .inner-container .image-section img {
   width: 100%;
   max-width: 45rem;
   min-width: 38rem;
@@ -288,22 +253,13 @@ a {
   #help-container .rules-container .text-container {
     padding: 2rem 1.5rem;
   }
-  #help-container
-    .rules-container
-    .text-container
-    .content-block
-    .rules-points {
+  #help-container .rules-container .text-container .content-block .rules-points {
     grid-template-columns: 4rem 1fr;
     gap: 1rem;
     padding: 2rem 0rem;
     font-size: 2.8rem;
   }
-  #help-container
-    .rules-container
-    .text-container
-    .content-block
-    .rules-points
-    span {
+  #help-container .rules-container .text-container .content-block .rules-points span {
     width: 4rem;
     height: 4rem;
     line-height: 4rem;
@@ -349,137 +305,64 @@ a {
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-evenly;
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .players-container {
+#game-container .inner-container .content-block .game-section .players-container {
   padding: 5rem 0;
   text-align: center;
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .players-container
-  .score-container
-  h3 {
+#game-container .inner-container .content-block .game-section .players-container .score-container h3 {
   font-size: 6rem;
   font-weight: 400;
   color: #70c11f;
   text-shadow: 4px 4px rgba(0, 0, 0, 0.25);
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .players-container
-  .score-container
-  h3
-  span {
+#game-container .inner-container .content-block .game-section .players-container .score-container h3 span {
   color: #fffcfc;
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .players-container
-  .score-container
-  p {
+#game-container .inner-container .content-block .game-section .players-container .score-container p {
   margin-top: 2rem;
   font-size: 18rem;
   color: #fffcfc;
   text-shadow: 7px 4px rgba(0, 0, 0, 0.25);
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .game-board-container
-  .grid-container {
+#game-container .inner-container .content-block .game-section .game-board-container .grid-container {
   width: 60rem;
   height: 60rem;
   margin: 0px auto;
   display: grid;
   grid-template-columns: auto auto auto;
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .game-board-container
-  .grid-container
-  .grid-item {
+#game-container .inner-container .content-block .game-section .game-board-container .grid-container .grid-item {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .game-board-container
-  .grid-container
-  .grid-item
-  button {
+#game-container .inner-container .content-block .game-section .game-board-container .grid-container .grid-item button {
   display: inline-block;
   width: 12rem;
   height: 12rem;
   position: relative;
   color: #fffcfc;
-  background: linear-gradient(
-    146.54deg,
-    rgba(255, 255, 255, 0.7) 4.33%,
-    #70c11f 25.12%,
-    rgba(119, 152, 85, 0.86) 75.26%
-  );
+  background: linear-gradient(146.54deg, rgba(255, 255, 255, 0.7) 4.33%, #70c11f 25.12%, rgba(119, 152, 85, 0.86) 75.26%);
   border-radius: 1.5rem;
   box-shadow: 0 1.2rem rgba(0, 0, 0, 0.25);
   transition: 0.1s;
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .game-board-container
-  .grid-container
-  .grid-item
-  button
-  svg {
+#game-container .inner-container .content-block .game-section .game-board-container .grid-container .grid-item button svg {
   display: none;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .game-board-container
-  .grid-container
-  .grid-item
-  button:active {
+#game-container .inner-container .content-block .game-section .game-board-container .grid-container .grid-item button:active {
   box-shadow: 0 0.5rem rgba(0, 0, 0, 0.25);
   transform: translate(0, 1rem);
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .game-board-container
-  .grid-container
-  .row-2 {
+#game-container .inner-container .content-block .game-section .game-board-container .grid-container .row-2 {
   border-top: 3px solid #a1a195;
   border-bottom: 3px solid #a1a195;
 }
-#game-container
-  .inner-container
-  .content-block
-  .game-section
-  .game-board-container
-  .grid-container
-  .col-2 {
+#game-container .inner-container .content-block .game-section .game-board-container .grid-container .col-2 {
   border-left: 3px solid #a1a195;
   border-right: 3px solid #a1a195;
 }
@@ -490,57 +373,25 @@ a {
   #game-container .inner-container .content-block .timer-section time {
     font-size: 4.5rem;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .players-container
-    .score-container
-    h3 {
+  #game-container .inner-container .content-block .game-section .players-container .score-container h3 {
     font-size: 4.5rem;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .players-container
-    .score-container
-    p {
+  #game-container .inner-container .content-block .game-section .players-container .score-container p {
     margin-top: 2rem;
     font-size: 12.5rem;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .game-board-container
-    .grid-container {
+  #game-container .inner-container .content-block .game-section .game-board-container .grid-container {
     width: 45rem;
     height: 45rem;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .game-board-container
-    .grid-container
-    .grid-item
-    button {
+  #game-container .inner-container .content-block .game-section .game-board-container .grid-container .grid-item button {
     width: 9rem;
     height: 9rem;
     border-radius: 1.2rem;
     box-shadow: 0 1rem rgba(0, 0, 0, 0.25);
     transition: 0.1s;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .game-board-container
-    .grid-container
-    .grid-item
-    button
-    svg {
+  #game-container .inner-container .content-block .game-section .game-board-container .grid-container .grid-item button svg {
     width: 75%;
   }
 }
@@ -557,89 +408,45 @@ a {
   #game-container .inner-container .content-block .game-section {
     grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 100px;
-    column-gap: 100px;
+         column-gap: 100px;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .players-container {
+  #game-container .inner-container .content-block .game-section .players-container {
     justify-self: end;
     padding: 1rem 0;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .players-container:last-child {
+  #game-container .inner-container .content-block .game-section .players-container:last-child {
     justify-self: start;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .players-container
-    .score-container
-    h3 {
+  #game-container .inner-container .content-block .game-section .players-container .score-container h3 {
     font-size: 3.5rem;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .players-container
-    .score-container
-    p {
+  #game-container .inner-container .content-block .game-section .players-container .score-container p {
     margin-top: 0rem;
     font-size: 10.5rem;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .game-board-container {
+  #game-container .inner-container .content-block .game-section .game-board-container {
     grid-column: 1/3;
     grid-row: 1/2;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .game-board-container
-    .grid-container {
+  #game-container .inner-container .content-block .game-section .game-board-container .grid-container {
     width: 40rem;
     height: 40rem;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .game-board-container
-    .grid-container
-    .grid-item
-    button {
+  #game-container .inner-container .content-block .game-section .game-board-container .grid-container .grid-item button {
     width: 8rem;
     height: 8rem;
     border-radius: 1.2rem;
     box-shadow: 0 1rem rgba(0, 0, 0, 0.25);
     transition: 0.1s;
   }
-  #game-container
-    .inner-container
-    .content-block
-    .game-section
-    .game-board-container
-    .grid-container
-    .grid-item
-    button
-    svg {
+  #game-container .inner-container .content-block .game-section .game-board-container .grid-container .grid-item button svg {
     width: 75%;
   }
 }
 
 #pop-window-container {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   display: none;
   justify-content: center;
   align-items: center;
@@ -647,12 +454,7 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(40, 45, 87, 0.8),
-    rgba(40, 45, 87, 0.95),
-    rgba(0, 0, 0, 0.8)
-  );
+  background: linear-gradient(to bottom, rgba(40, 45, 87, 0.8), rgba(40, 45, 87, 0.95), rgba(0, 0, 0, 0.8));
 }
 #pop-window-container .inner-container {
   padding: 2rem 3rem;
@@ -719,8 +521,8 @@ a {
 
 #toss-window-container {
   width: 100%;
-  height: 100%;
-  display: none;
+  min-height: 100vh;
+  display: flex;
   justify-content: center;
   align-items: center;
   z-index: 10;
@@ -728,12 +530,7 @@ a {
   top: 0;
   left: 0;
   transition: all 0.4s ease-in;
-  background: linear-gradient(
-    to bottom,
-    rgba(40, 45, 87, 0.8),
-    rgba(40, 45, 87, 0.95),
-    rgba(0, 0, 0, 0.8)
-  );
+  background: linear-gradient(to bottom, rgba(40, 45, 87, 0.8), rgba(40, 45, 87, 0.95), rgba(0, 0, 0, 0.8));
 }
 #toss-window-container .inner-container {
   padding: 2rem 3rem;
@@ -752,11 +549,7 @@ a {
   background: transparent;
   perspective: 600px;
 }
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card {
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card {
   width: 100%;
   height: 100%;
   position: relative;
@@ -765,18 +558,8 @@ a {
   transition-timing-function: ease-out;
   transform-style: preserve-3d;
 }
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card
-  .front-side,
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card
-  .back-side {
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card .front-side,
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card .back-side {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -784,25 +567,12 @@ a {
   left: 0;
   border: 4px solid #fffcfc;
   border-radius: 1.2rem;
-  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2),
-    -4px 20px 20px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2), -4px 20px 20px 0px rgba(0, 0, 0, 0.2);
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
 }
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card
-  .front-side
-  p,
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card
-  .back-side
-  p {
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card .front-side p,
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card .back-side p {
   font-size: 5.4rem;
   text-align: center;
   padding: 1.5rem 0;
@@ -810,69 +580,25 @@ a {
   color: #fffcfc;
   text-shadow: 4px 4px rgba(0, 0, 0, 0.3);
 }
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card
-  .front-side
-  .player-logo,
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card
-  .back-side
-  .player-logo {
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card .front-side .player-logo,
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card .back-side .player-logo {
   width: 100%;
   height: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card
-  .front-side
-  .player-logo
-  svg,
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card
-  .back-side
-  .player-logo
-  svg {
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card .front-side .player-logo svg,
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card .back-side .player-logo svg {
   width: 12rem;
   height: auto;
   filter: drop-shadow(7px 7px rgba(0, 0, 0, 0.25));
 }
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card
-  .front-side {
-  background: linear-gradient(
-    146.54deg,
-    #70c11f 35%,
-    rgba(75, 137, 12, 0.98) 60%
-  );
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card .front-side {
+  background: linear-gradient(146.54deg, #70c11f 35%, rgba(75, 137, 12, 0.98) 60%);
 }
-#toss-window-container
-  .inner-container
-  .toss-container
-  .flip-card-container
-  .flip-card
-  .back-side {
-  background: linear-gradient(
-    146.54deg,
-    rgba(75, 137, 12, 0.98) 35.26%,
-    #70c11f 75.12%
-  );
+#toss-window-container .inner-container .toss-container .flip-card-container .flip-card .back-side {
+  background: linear-gradient(146.54deg, rgba(75, 137, 12, 0.98) 35.26%, #70c11f 75.12%);
   transform: rotateY(180deg);
 }
 #toss-window-container .inner-container .button-container {
@@ -899,4 +625,4 @@ a {
   background-color: #579f0f;
   box-shadow: 0 0.5rem rgba(255, 255, 255, 0.8);
   transform: translate(0, 1.2rem);
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
