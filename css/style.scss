@@ -93,7 +93,7 @@ a {
   @include dimension(100%, 100vh);
   z-index: -1;
   background: {
-    image: url("../Images/home-bg.png");
+    image: url("../images/home-bg.png");
     repeat: no-repeat;
     size: cover;
     // attachment: fixed;
@@ -193,7 +193,7 @@ a {
       rgba(0, 0, 0, 0.2),
       rgba(0, 0, 0, 0.6)
     ),
-    url("../Images/help-bg.png");
+    url("../images/help-bg.png");
   background: {
     repeat: no-repeat;
     size: cover;
@@ -347,7 +347,7 @@ a {
   min-height: 100vh;
   z-index: -1;
   background: {
-    image: url("../Images/game-bg.png");
+    image: url("../images/game-bg.png");
     repeat: no-repeat;
     size: cover;
     position: center;
