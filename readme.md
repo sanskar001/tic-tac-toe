@@ -2,7 +2,7 @@
 
 ![alt text](https://github.com/sanskar001/tic-tac-toe/blob/master/images/favicon.svg "tic-tac-toe game logo")
 
-Play the classic interactive Tic-Tac-Toe game 😎 for free online with one ☝ or two ✌ players.
+Play the classic interactive Tic-Tac-Toe game 😎 for free online with two ✌ players.
 
 [Visit website 🚀](https://sanskar001.github.io/tic-tac-toe/)
 
